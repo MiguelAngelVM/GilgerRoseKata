@@ -80,6 +80,37 @@ Pretty simple, right? Well this is where it gets interesting:
     SellIn value approaches; Quality increases by 2 when there are 10
     days or less and by 3 when there are 5 days or less but Quality
     drops to 0 after the concert
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////777
+
+- Una vez que la fecha de caducidad ha pasado, la calidad se degrada dos veces más rápido
+   - La calidad de un artículo nunca es negativo
+   - "Brie Aged" en realidad aumenta en calidad cuanto más viejo se pone
+   - La calidad de un artículo es nunca más de 50
+   - "Sulfuras", al ser un objeto legendario, nunca tiene que ser vendido o
+     disminuciones en la calidad
+   - "Entre bastidores pasa", como brie edad, aumenta en calidad, ya que es
+     Enfoques de valor Sellin; Aumentos de calidad por 2 cuando hay 10
+     días o menos y por 3 cuando hay 5 días o menos, pero de calidad
+     se reduce a 0 después del concierto
+
+
+Hemos firmado recientemente un proveedor de artículos conjurado. Esto requiere una actualización de nuestro sistema:
+
+- Artículos "conjurado" degradan en Calidad doble de rápido que los elementos normales
+
+Siéntase libre de hacer cualquier cambio en el método UpdateQuality y añadir cualquier
+nuevo código mientras todo sigue funcionando correctamente. Sin embargo, no lo hacen
+alterar la propiedad de clase de artículo o artículos como aquellos pertenecen a la goblin
+en la esquina que se insta-rabia y de una sola vez que como no lo hace
+creer en la propiedad de código compartido (se puede hacer el UpdateQuality
+método y Artículos propiedad estática si se quiere, vamos a cubrir para
+tú). Su trabajo debe ser completado por el Viernes, 18 de febrero 2011
+08:00:00 AM PST.
+
+Sólo una aclaración, un elemento no puede tener su aumento de Calidad
+por encima de 50, sin embargo "Sulfuras" es un elemento de leyenda y como tal su
+La calidad es 80 y nunca se altera.
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 We have recently signed a supplier of conjured items. This requires an update to our system:
 
