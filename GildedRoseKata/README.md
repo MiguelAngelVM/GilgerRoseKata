@@ -76,13 +76,13 @@ Pretty simple, right? Well this is where it gets interesting:
   - The Quality of an item is never more than 50
   - "Sulfuras", being a legendary item, never has to be sold or
     decreases in Quality
-  - "Backstage passes", like aged brie, increases in Quality as it's
+  - "Backstage passes       ", like aged brie, increases in Quality as it's
     SellIn value approaches; Quality increases by 2 when there are 10
     days or less and by 3 when there are 5 days or less but Quality
     drops to 0 after the concert
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////777
 
-- Una vez que la fecha de caducidad ha pasado, la calidad se degrada dos veces más rápido
+   - Una vez que la fecha de caducidad ha pasado, la calidad se degrada dos veces más rápido
    - La calidad de un artículo nunca es negativo
    - "Brie Aged" en realidad aumenta en calidad cuanto más viejo se pone
    - La calidad de un artículo es nunca más de 50

@@ -3,10 +3,11 @@ package gildedrose;
 import java.util.List;
 
 public class GildedRose {
-
+Acciones acciones = new Acciones();
 	public void updateQuality(List<Item> items) {
 		for (Item item : items) {
-			if (item.getQuality() > 0) {
+			if (item.getQuality() > 0 ) {				
+				
 				if (!item.getName().equals("Aged Brie")
 						&& !item.getName().equals(
 								"Backstage passes to a TAFKAL80ETC concert")) {
@@ -54,6 +55,7 @@ public class GildedRose {
 						}
 					} else {
 						if (item.getQuality() < 50) {
+							
 							item.setQuality(item.getQuality() + 1);
 						}
 					}
