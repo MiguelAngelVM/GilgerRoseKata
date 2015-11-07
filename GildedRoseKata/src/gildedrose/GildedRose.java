@@ -3,71 +3,53 @@ package gildedrose;
 import java.util.List;
 
 public class GildedRose {
+	Command command;
+	Invoke invoke;
 	public void updateQuality(List<Item> items) {
-		for (Item item : items) {
+		for (final Item item : items) {
 			
-			if (!item.getName().equals("Aged Brie") && !item.getName().equals("Backstage passes to a TAFKAL80ETC concert") && !item.getName().equals("Sulfuras, Hand of Ragnaros")) {
-				if (item.getQuality() > 0) 
-				{		
-					DisminucionCualidades.disminuirCualidad(item);					
-				}
-				if(item.getName().equals("Conjured Mana Cake") && item.getQuality() > 0)
-				{
-					
-					DisminucionCualidades.disminuirCualidad(item);	
-				}
-			} 
-			else 
-			{
-				if (item.getQuality() < 50)
-				{
-					item.setQuality(item.getQuality() + 1);
-					
-					if (item.getName().equals("Backstage passes to a TAFKAL80ETC concert"))
-					{
-						if (item.getSellIn() < 11 && item.getQuality() < 50)
-						{							
-							AumentoCualidad.aumentarCualidad(item);						
-						}
-						if (item.getSellIn() < 6 && item.getQuality() < 50) 
-						{							
-							AumentoCualidad.aumentarCualidad(item);		
-						}
-					}
-				}
+			switch (item.getName()) {
+			
+			case "Aged Brie":
+				 command  = new IniciarCiclo(new AgedBrie());
+				 invoke = new Invoke(command);
+				 invoke.run(item);
+				break;	
+			
+			case "Backstage passes to a TAFKAL80ETC concert":
+				 command  = new IniciarCiclo(new Backstage());
+				 invoke = new Invoke(command);
+				 invoke.run(item);
+				break;
+				
+			case "Sulfuras, Hand of Ragnaros":
+				 command  = new IniciarCiclo(new Sulfuras());
+				 invoke = new Invoke(command);
+				 invoke.run(item);
+				break;
+			
+			case "Conjured Mana Cake":
+				 command  = new IniciarCiclo(new Conjured());
+				 invoke = new Invoke(command);
+				 invoke.run(item);
+				break;
+			
+			case "NORMAL ITEM":
+				 command  = new IniciarCiclo(new NORMAL());
+				 invoke = new Invoke(command);
+				 invoke.run(item);
+				break;
+		
+				
 			}
-			if (item.getName() != "Sulfuras, Hand of Ragnaros") 
-			{
-				item.setSellIn(item.getSellIn() - 1);
-			}
-			if (item.getSellIn() < 0) 
-			{
-				if (item.getName() != "Aged Brie")
-				{
-					if (item.getName() != "Backstage passes to a TAFKAL80ETC concert")
-					{
-						if (item.getQuality() > 0 && item.getQuality() != 80) 
-						{							
-							DisminucionCualidades.disminuirCualidad(item);						
-						}
-						if (item.getQuality() > 0 && item.getQuality() != 80 && item.getName().equals("Conjured Mana Cake") && item.getQuality() > 0)
-						{							
-							DisminucionCualidades.disminuirCualidad(item);							
-						}
-					}
-					else
-					{
-						item.setQuality(0);
-					}
-				} 
-				else 
-				{
-					if (item.getQuality() < 50)
-					{
-						AumentoCualidad.aumentarCualidad(item);		
-					}
-				}
-			}	
+				
+				
+			
+			
+			
+			
+			
+				
 		
 		}		
 	}
